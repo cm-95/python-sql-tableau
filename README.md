@@ -20,3 +20,6 @@ Using various visuals and calculated fields, create a dashboard that can be filt
 
 Visuals of the dashboard can be found below:
 
+![Alt text](/screenshots/1.png?raw=true "1")
+![Alt text](/screenshots/2.png?raw=true "2")
+![Alt text](/screenshots/3.png?raw=true "3")

@@ -236,13 +236,10 @@
       <column-instance column='[Close]' derivation='Sum' name='[win:sum:Close:qk:4]' pivot='key' type='quantitative'>
         <table-calc aggregation='Avg' from='-5' ordering-field='[federated.0oa0no807i936s10ge80q1s2g4aq].[tdy:Date:qk]' ordering-type='Field' to='0' type='WindowTotal' window-options='IncludeCurrent' />
       </column-instance>
-      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='false' units='records'>
-        <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='/Users/callummcdonald/Documents/My Tableau Repository/Data sources/stock_data.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='02/22/2022 10:39:52 AM' username='tableau_internal_user'>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='/Users/callummcdonald/Documents/My Tableau Repository/Data sources/stock_data.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
           <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
           <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
-          <refresh>
-            <refresh-event add-from-file-path='stock_data' increment-value='%null%' refresh-type='create' rows-inserted='43238' timestamp-start='2022-02-22 10:39:52.191' />
-          </refresh>
           <metadata-records>
             <metadata-record class='column'>
               <remote-name>F1</remote-name>
@@ -256,7 +253,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>43238</approx-count>
               <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stock_data.csv_6A3EF228C425472790F9D48EFBE56BF8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Date</remote-name>
@@ -270,7 +266,6 @@
               <aggregation>Year</aggregation>
               <approx-count>1165</approx-count>
               <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stock_data.csv_6A3EF228C425472790F9D48EFBE56BF8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Open</remote-name>
@@ -284,7 +279,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>14516</approx-count>
               <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stock_data.csv_6A3EF228C425472790F9D48EFBE56BF8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>High</remote-name>
@@ -298,7 +292,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>16447</approx-count>
               <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stock_data.csv_6A3EF228C425472790F9D48EFBE56BF8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Close</remote-name>
@@ -312,7 +305,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>15491</approx-count>
               <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stock_data.csv_6A3EF228C425472790F9D48EFBE56BF8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>AdjClose</remote-name>
@@ -326,7 +318,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>38979</approx-count>
               <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stock_data.csv_6A3EF228C425472790F9D48EFBE56BF8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Volume</remote-name>
@@ -340,7 +331,6 @@
               <aggregation>Sum</aggregation>
               <approx-count>30337</approx-count>
               <contains-null>true</contains-null>
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stock_data.csv_6A3EF228C425472790F9D48EFBE56BF8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>Ticker</remote-name>
@@ -355,7 +345,6 @@
               <approx-count>100</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RGB' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stock_data.csv_6A3EF228C425472790F9D48EFBE56BF8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
             <metadata-record class='column'>
               <remote-name>CompanyName</remote-name>
@@ -370,7 +359,6 @@
               <approx-count>99</approx-count>
               <contains-null>true</contains-null>
               <collation flag='0' name='LEN_RGB' />
-              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[stock_data.csv_6A3EF228C425472790F9D48EFBE56BF8]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
             </metadata-record>
           </metadata-records>
         </connection>
@@ -965,9 +953,11 @@
         </viewpoint>
         <viewpoint name='OverallWeeklyVos' />
         <viewpoint name='Volatility' />
-        <viewpoint name='VolsByComp' />
+        <viewpoint name='VolsByComp'>
+          <default-map-tool-selection tool='4' />
+        </viewpoint>
       </viewpoints>
-      <active id='16' />
+      <active id='-1' />
       <simple-id uuid='{8B81EF97-48A9-4317-B8FF-C3A2100997E6}' />
     </window>
     <window class='worksheet' name='OverallWeeklyVos'>
