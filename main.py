@@ -11,7 +11,7 @@ if __name__ == "__main__":
     sql = Database()
     sql.insert_data_to_db(rsa)
 
-    DAYS = 500
+    DAYS = 10
     data = sql.get_last_n_days_per_ticker(500)
     path = os.path.dirname(os.path.abspath(__file__))
     csv_path = os.path.join(path, "stock_data.csv")
