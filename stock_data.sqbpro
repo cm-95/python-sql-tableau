@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/callummcdonald/Documents/projects/python-sql-tableau/utils_and_db/stock_data.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1147"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,15:mainsqlite_sequence"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">-- select t3.*
+-- FROM
+-- 		(SELECT DISTINCT Ticker
+-- 		FROM stock_analysis) 
+-- 		as td
+-- 		JOIN stock_analysis as t3
+-- 		ON t3.Id IN(
+-- 								SELECT t1.Id
+-- 								FROM stock_analysis AS t1
+-- 								WHERE t1.Id = td.Id
+-- 								ORDER BY t1.Date ASC
+-- 								LIMIT 10);
+
+-- select * from stock_analysis
+
+SELECT * FROM stock_analysis t1
+WHERE t1.ID IN
+	(SELECT t2.Id 
+	FROM stock_analysis t2
+	WHERE t2.Ticker = t1.Ticker
+	ORDER by t2.Date DESC
+	LIMIT 10
+	);</sql><current_tab id="0"/></tab_sql></sqlb_project>
